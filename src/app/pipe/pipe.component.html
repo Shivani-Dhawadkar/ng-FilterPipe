@@ -1,0 +1,71 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-sm-12">
+       <p class="alert alert-info">
+        {{lorem | uppercase}}
+       </p>
+       <hr>
+       <p class="alert alert-info">
+        {{lorem | lowercase}}
+       </p>
+       <hr>
+       <p class="alert alert-info">
+        {{lorem | titlecase}}
+       </p>
+  
+      </div>
+    </div>
+  </div>
+  <hr>
+  <hr>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>
+          {{d}}
+        </p>
+        <hr>
+        <p>
+          {{d | date}}
+        </p>
+        <hr>
+        <p>
+          {{d | date:'short'}}
+        </p>
+        <hr>
+        <p>
+          {{d | date:'mediumTime'}}
+        </p>
+  
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card col-md-4">
+                <div class="card-header">
+                    <p>
+                        Course Title : {{course.courseName | uppercase}}
+                    </p>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Student Count :  {{course.stdNo | number}}
+                    </p>
+                    <p>
+                        Course Rating : {{course.rating | number}}
+                    </p>
+                    <p>
+                        Realise Date : {{course.releaseDate | date}}
+                    </p>
+                    <p>
+                        Course Fee : {{course.price | currency :'INR'}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

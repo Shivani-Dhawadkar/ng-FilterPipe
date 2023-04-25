@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="bg-primary mt-4 text-white">
+                Cricketor
+            </h1>
+            <div class="form-group">
+                <label for="">  </label>
+                <input type="text" value="" class = "form-control" placeholder="Search by Country Name" 
+                [(ngModel)]="searchBy">
+            </div>
+            <table class="table table-bordered" >
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Role </th>
+                        <th>Age</th>
+                        <th>Match Played</th>
+                        <th>Total Runs</th>
+                        <th>Total Wickets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let play of playerarray | filterPipe :searchBy; index as i ">
+                        <td> {{i + 1}}</td>
+                        <td>{{play.name}}</td>
+                        <td>{{play.country}}</td>
+                        <td>{{play.role}}</td>
+                        <td>{{play.age}}</td>
+                        <td>{{play.matchesPlayed}}</td>
+                        <td>{{play.totalRuns}}</td>
+                        <td>{{play.totalWickets}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
